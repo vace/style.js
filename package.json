@@ -1,0 +1,27 @@
+{
+  "name": "css-style.js",
+  "version": "1.0.0",
+  "description": "modify the element style fast and safety and auto prefixes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack":"webpack lib/index.js ./index.js --output-library style --output-library-target umd --progress --colors",
+    "babel":"babel src -d lib",
+    "build":"npm run babel && npm run webpack && webpack lib/index.js ./index.min.js --output-library style --output-library-target umd -p && node lib/banner.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vace/style.js.git"
+  },
+  "keywords": [
+    "css",
+    "style"
+  ],
+  "author": "vace",
+  "license": "MIT",
+  "main":"index.js",
+  "bugs": {
+    "url": "https://github.com/vace/style.js/issues"
+  },
+  "homepage": "https://github.com/vace/style.js#readme"
+}
